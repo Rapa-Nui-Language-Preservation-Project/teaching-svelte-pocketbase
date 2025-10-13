@@ -2,10 +2,12 @@
   let { data } = $props();
 </script>
 
-<div class="m-16">
+<posts class="m-16 flex flex-row gap-4">
   {#each data.posts as post, index}
-    <h1 class="font-bold text-xl">Post #{index + 1}</h1>
-    <img src={post.image} alt="" class="w-64" />
-    <p>{post.description}</p>
+    <post>
+      <h1 class="font-bold text-xl">Post #{index + 1}</h1>
+      <img src={post.image} alt="" class="w-64" />
+      <p>{post.description}</p>
+    </post>
   {/each}
-</div>
+</posts>
